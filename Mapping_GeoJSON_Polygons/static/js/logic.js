@@ -43,7 +43,7 @@ zoom: 2,
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the airport GeoJSON URL
-let airportData = 'https://raw.githubusercontent.com/damianperreira/Mapping_Earthquakes/Mapping_GeoJSON_Linestrings/torontoRoutes.json';
+let airportData = 'https://raw.githubusercontent.com/damianperreira/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoRoutes.json';
 
 // Grabbing our GeoJSON data.
 d3.json(airportData).then(function(data) {
@@ -52,3 +52,4 @@ d3.json(airportData).then(function(data) {
   L.geoJson(data).addTo(map);
 });
 
+//https://raw.githubusercontent.com/damianperreira/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoRoutes.json

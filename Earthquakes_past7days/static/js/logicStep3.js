@@ -1,5 +1,5 @@
 // Add console.log to check to see if our code is working.
-console.log("step 2 is working");
+console.log("step 3 is working");
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
 
@@ -56,5 +56,10 @@ function getColor(magnitude) {
 		onEachFeature: function(feature, layer) {
 		layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
 		}	  
-  }).addTo(map);
+  }).addTo(earthquakes);
+
+  //Then we add the earthquake layer to the map.
+  earthquakes.addTo(map);
 });
+
+

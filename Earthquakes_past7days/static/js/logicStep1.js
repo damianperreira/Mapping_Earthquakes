@@ -28,5 +28,5 @@ let map = L.map('mapid', {
 	layers: [streets]
 })
 
-// Pass our map layers into our layers control and add the layers control to the map.
-L.control.layers(baseMaps).addTo(map);
+// ** moved to logicStep4.js **  Pass our map layers into layers control and add the layers control to the map.
+//L.control.layers(baseMaps).addTo(map);

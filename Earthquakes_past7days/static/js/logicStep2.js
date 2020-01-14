@@ -29,7 +29,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   //  pointToLayer: function(feature, latlng) {
 //		  console.log(data);
 //		  return L.circleMarker(latlng);
-	  },
+	  });
 		// We set the style for each circleMarker using our styleInfo function.
 //		style: styleInfo	  
 //  }).addTo(map);

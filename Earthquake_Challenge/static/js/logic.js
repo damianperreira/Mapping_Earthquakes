@@ -20,7 +20,7 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 });
 
 
-// Create the map object with center, zoom level and default layer.
+// Create the map object with center, zoom level and default layer. 
 var map = L.map('mapid', {
 	center: [39.5, -98.5],
 	zoom: 3,

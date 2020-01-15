@@ -12,6 +12,14 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 	accessToken: API_KEY
 });
 
+// We create the outdoors view tile layer that will be an option for our map.
+var darkmap = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+	maxZoom: 18,
+	accessToken: API_KEY
+});
+
+
 // Create the map object with center, zoom level and default layer.
 var map = L.map('mapid', {
 	center: [39.5, -98.5],
@@ -27,7 +35,8 @@ var map = L.map('mapid', {
 // Create a base layer that holds both maps.
 var baseMaps = {
   "Street": streets,
-  "Satellite Streets": satelliteStreets
+  "Satellite Streets": satelliteStreets,
+  "Dark Map": darkmap
 };
 
 // Create overlay layer
